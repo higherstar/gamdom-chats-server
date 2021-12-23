@@ -4,7 +4,7 @@ let socket;
 
 const buildSocket = (server): void => {
   if (server) {
-    socket = SocketIO(server, { path: '/api/chat' });
+    socket = new SocketIO.Server(server, { path: '/api/chat' });
     socket.on('connection', (socket) => {
       socket.on('join', function (channelID) {
         socket.join(channelID);

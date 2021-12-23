@@ -15,7 +15,7 @@ function startServer() {
       console.log(`Online Node server is online.`);
       console.log(`PORT: ${PORT}`);
       console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
-      resolve();
+      resolve(true);
     });
   });
 }
